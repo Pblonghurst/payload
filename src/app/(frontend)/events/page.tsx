@@ -16,7 +16,7 @@ export default async function HomePage() {
 
   return (
     <div className="home">
-      <h1> Profile </h1>
+      <h1>Events</h1>
     </div>
   )
 }
