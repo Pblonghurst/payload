@@ -10,6 +10,21 @@ To spin up this template locally, follow these steps:
 3. `pnpm install && pnpm dev` to install dependencies and start the dev server
 4. open `http://localhost:3000` to open the app in your browser
 
+#### Docker (Optional)
+If you prefer to use Docker for local development instead of a local MongoDB instance, the provided docker-compose.yml file can be used.
+To do so, follow these steps:
+- Modify the `MONGODB_URI` in your `.env` file to `mongodb://127.0.0.1/<dbname>`
+- Modify the `docker-compose.yml` file's `MONGODB_URI` to match the above `<dbname>`
+- Run `docker-compose up` to start the database, optionally pass `-d` to run in the background.
+
+### Docker
+Alternatively, you can use [Docker](https://www.docker.com) to spin up this template locally. To do so, follow these steps:
+1. Follow [steps 1 and 2 from above](#development), the docker-compose file will automatically use the `.env` file in your project root
+1. Next run `docker-compose up`
+1. Follow [steps 4 and 5 from above](#development) to login and create your first admin user
+That's it! The Docker instance will help you get up and running quickly while also standardizing the development environment across your teams.
+
+### Users
 this has been set up to seed the cms with users/events/pages if no users are present on start.  <br />
 user logins:  <br />
 user: 'owner@example.com' (owner)  <br />
