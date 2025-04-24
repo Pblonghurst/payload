@@ -17,11 +17,11 @@ export default async function HomePage() {
   ).docs
 
   return (
-    <div className="flex  my-0 mx-auto flex-col p-8 h-[calc(100vh-200px)] max-w-7xl">
+    <div className="flex my-0 mx-auto flex-col p-8 min-h-[calc(100vh-200px)] max-w-7xl">
       <h1 className="text-4xl pb-12">Events</h1>
 
       {/* loop through and display events */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 pb-16">
         {events.map((item) => (
           <Card
             key={item.id}
