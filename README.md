@@ -13,7 +13,7 @@ To spin up this template locally, follow these steps:
 this has been set up to seed the cms with users/events/pages if no users are present on start.  <br />
 user logins:  <br />
 user: 'owner@example.com' (owner)  <br />
-user: 'staffOne@example.com' (satff)  <br />
+user: 'staffOne@example.com' (staff)  <br />
 user: 'staffTwo@example.com' (staff)  <br />
 pasword(same for all users): 'changeme'
 
