@@ -14,8 +14,8 @@ export default async function HomePage() {
   const fileURL = `vscode://file/${fileURLToPath(import.meta.url)}`
 
   return (
-    <div className="text-3xl font-bold underline">
-      <h1>Events</h1>
+    <div className="flex  my-0 mx-auto flex-col p-8 h-[calc(100vh-200px)] max-w-7xl">
+      <h1 className="text-3xl">Events</h1>
     </div>
   )
 }

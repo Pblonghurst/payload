@@ -1,10 +1,8 @@
 import { headers as getHeaders } from 'next/headers.js'
-import Image from 'next/image'
 import { getPayload } from 'payload'
 import React from 'react'
 import { fileURLToPath } from 'url'
-import Link from 'next/link'
-
+import Button from '@/compoents/ui/Button'
 import config from '@/payload.config'
 import './styles.css'
 
@@ -17,45 +15,15 @@ export default async function HomePage() {
   const fileURL = `vscode://file/${fileURLToPath(import.meta.url)}`
 
   return (
-    <div className="home">
-      <Link href="profile">Profile</Link>
-      <Link href="events">Events</Link>
+    <div className="flex justify-center my-0 mx-auto flex-col p-8 h-[calc(100vh-200px)] max-w-7xl">
       <div className="content">
-        <picture>
-          <source srcSet="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-favicon.svg" />
-          <Image
-            alt="Payload Logo"
-            height={65}
-            src="https://raw.githubusercontent.com/payloadcms/payload/main/packages/ui/src/assets/payload-favicon.svg"
-            width={65}
-          />
-        </picture>
-        {!user && <h1>Welcome to your new project.</h1>}
-        {user && <h1>Welcome back, {user.email}</h1>}
-        <div className="links">
-          <a
-            className="admin"
-            href={payloadConfig.routes.admin}
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Go to admin panel
-          </a>
-          <a
-            className="docs"
-            href="https://payloadcms.com/docs"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Documentation
-          </a>
+        <div className="pb-12">
+          {!user && <h1 className="text-7xl">Welcome to your new project.</h1>}
+          {user && <h1 className="text-7xl">Welcome back, {user.email}</h1>}
         </div>
-      </div>
-      <div className="footer">
-        <p>Update this page by editing</p>
-        <a className="codeLink" href={fileURL}>
-          <code>app/(frontend)/page.tsx</code>
-        </a>
+        <div className="links">
+          <Button title="Go to Admin" link={payloadConfig.routes.admin} />
+        </div>
       </div>
     </div>
   )
