@@ -35,6 +35,10 @@ export const Users: CollectionConfig = {
       required: true,
       hasMany: true,
       defaultValue: 'staff',
+      access: {
+        create: isOwner,
+        update: isOwner,
+      },
       options: [
         { label: 'Owner', value: 'owner' },
         { label: 'Staff', value: 'staff' },

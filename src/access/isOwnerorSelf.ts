@@ -1,16 +1,14 @@
-import { Access, FieldAccess } from 'payload'
+import { Access, Where, FieldAccess } from 'payload'
 import { User } from '../payload-types'
 
 export const isOwnerOrSelf: Access = ({ req: { user } }) => {
-  if (user) {
-    if (user.role?.includes('owner')) {
-      return true
-    }
-    return {
-      id: {
-        equals: user.id,
-      },
-    }
+  if (!user) return false
+
+  if (user.role?.includes('owner')) {
+    return true
   }
-  return false
+
+  return {
+    or: [{ id: { equals: user.id } }, { createdBy: { equals: user.id } }],
+  } as Where
 }
