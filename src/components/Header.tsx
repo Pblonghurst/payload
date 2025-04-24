@@ -1,5 +1,7 @@
 import Link from 'next/link'
 import React from 'react'
+import { getPayload } from 'payload'
+import config from '@/payload.config'
 
 export default function Header() {
   return (
@@ -9,14 +11,8 @@ export default function Header() {
           Header
         </Link>
         <div className="flex gap-6 justify-center items-center">
-          <Link href="/about" className="w-fit text-1xl">
-            About
-          </Link>
-          <Link href="/events" className="w-fit text-1xl">
+          <Link href="/events" className="w-fit text-xl hover:underline">
             Events
-          </Link>
-          <Link href="/dashboard" className="w-fit text-1xl">
-            Dashboard
           </Link>
         </div>
       </div>

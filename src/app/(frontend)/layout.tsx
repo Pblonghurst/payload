@@ -1,7 +1,7 @@
 import React from 'react'
 import './styles.css'
-import Footer from '@/compoents/Footer'
-import Header from '@/compoents/Header'
+import Footer from '@/components/Footer'
+import Header from '@/components/Header'
 
 export const metadata = {
   description: 'A blank template using Payload in a Next.js app.',
