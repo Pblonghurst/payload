@@ -78,6 +78,34 @@ export default async function seed(payload: any): Promise<void> {
     })
   }
 
+  // create page
+  const page = await payload.create({
+    collection: 'pages',
+    data: {
+      title: 'Sample Page Two',
+      content: [
+        {
+          type: 'paragraph',
+          children: [{ text: 'This is a sample page with rich text.' }],
+        },
+      ],
+    },
+  })
+
+  // create page
+  const pageTwo = await payload.create({
+    collection: 'pages',
+    data: {
+      title: 'Sample Page Two',
+      content: [
+        {
+          type: 'paragraph',
+          children: [{ text: 'This is a sample page with rich text.' }],
+        },
+      ],
+    },
+  })
+
   console.log('Seeded users and events')
   // Add additional seed data here
 }
