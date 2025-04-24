@@ -10,11 +10,11 @@ To spin up this template locally, follow these steps:
 3. `pnpm install && pnpm dev` to install dependencies and start the dev server
 4. open `http://localhost:3000` to open the app in your browser
 
-this has been set up to seed the cms with users/events/pages if no users are present on start.
-user logins:
-user: 'owner@example.com' (owner) 
-user: 'staffOne@example.com' (satff)
-user: 'staffTwo@example.com' (staff)
+this has been set up to seed the cms with users/events/pages if no users are present on start.  <br />
+user logins:  <br />
+user: 'owner@example.com' (owner)  <br />
+user: 'staffOne@example.com' (satff)  <br />
+user: 'staffTwo@example.com' (staff)  <br />
 pasword(same for all users): 'changeme'
 
 The two staff own a few events each, aswell as th owner being credited for a few. This can be seen in admin panel.
