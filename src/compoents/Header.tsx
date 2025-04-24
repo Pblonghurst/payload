@@ -1,6 +1,4 @@
 import Link from 'next/link'
-import { getPayload } from 'payload'
-import { headers as getHeaders } from 'next/headers.js'
 import React from 'react'
 
 export default function Header() {

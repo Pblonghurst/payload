@@ -13,10 +13,7 @@ export const Users: CollectionConfig = {
     // Delete: Owner only
     delete: isOwner,
   },
-  // admin: {
-  //   useAsTitle: 'email',
-  //   hide: ({ req }) => !isOwner({ req }), // only Owner sees the Users UI
-  // },
+  admin: {},
   slug: 'users',
   auth: true,
   fields: [
@@ -30,13 +27,13 @@ export const Users: CollectionConfig = {
       type: 'email',
       required: true,
       unique: true,
+      defaultValue: '',
     },
     {
       name: 'role',
       type: 'select',
       required: true,
       hasMany: true,
-      saveToJWT: true,
       defaultValue: 'staff',
       options: [
         { label: 'Owner', value: 'owner' },
