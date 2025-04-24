@@ -2,7 +2,6 @@ import { headers as getHeaders } from 'next/headers.js'
 import { getPayload } from 'payload'
 import React from 'react'
 import { fileURLToPath } from 'url'
-import Link from 'next/link'
 
 import config from '@/payload.config'
 
@@ -15,7 +14,7 @@ export default async function HomePage() {
   const fileURL = `vscode://file/${fileURLToPath(import.meta.url)}`
 
   return (
-    <div className="home">
+    <div className="text-3xl font-bold underline">
       <h1>Events</h1>
     </div>
   )
