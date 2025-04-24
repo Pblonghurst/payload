@@ -18,8 +18,8 @@ export default async function HomePage() {
     <div className="flex justify-center my-0 mx-auto flex-col p-8 h-[calc(100vh-200px)] max-w-7xl">
       <div className="content">
         <div className="pb-12">
-          {!user && <h1 className="text-7xl">Welcome to your new project.</h1>}
-          {user && <h1 className="text-7xl">Welcome back, {user.email}</h1>}
+          {!user && <h1 className="text-4xl md:text-7xl">Welcome to your new project.</h1>}
+          {user && <h1 className="text-4xl md:text-7xl">Welcome back, {user.email}</h1>}
         </div>
         <p className="text-xl pb-12">
           Navigate to the admin panel below, or click on events in the to see all events displayed

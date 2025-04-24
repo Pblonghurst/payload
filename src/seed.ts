@@ -82,7 +82,7 @@ export default async function seed(payload: any): Promise<void> {
   const page = await payload.create({
     collection: 'pages',
     data: {
-      title: 'Sample Page Two',
+      title: 'PageOne',
       content: [
         {
           type: 'paragraph',
@@ -96,7 +96,7 @@ export default async function seed(payload: any): Promise<void> {
   const pageTwo = await payload.create({
     collection: 'pages',
     data: {
-      title: 'Sample Page Two',
+      title: 'PageTwo',
       content: [
         {
           type: 'paragraph',

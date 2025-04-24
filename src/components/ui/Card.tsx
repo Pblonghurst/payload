@@ -2,14 +2,14 @@ import React from 'react'
 import Link from 'next/link'
 
 // define props/types
-type ButtonProps = {
+type CardProps = {
   title: string
   location: string
   date: string
   createdBy: string
 }
 
-export default function Card({ title, location, date, createdBy }: ButtonProps) {
+export default function Card({ title, location, date, createdBy }: CardProps) {
   return (
     <div className="shadow-lg rounded-lg p-8">
       <h2 className="text-3xl pb-2">{title}</h2>

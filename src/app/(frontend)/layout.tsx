@@ -9,16 +9,24 @@ export const metadata = {
   description: 'A blank template using Payload in a Next.js app.',
   title: 'Payload Blank Template',
 }
-
 export default async function RootLayout(props: { children: React.ReactNode }) {
   const payloadConfig = await config
   const payload = await getPayload({ config: payloadConfig })
   const { children } = props
 
+  // fetch pages
+  const pages = (
+    await payload.find({
+      collection: 'pages',
+      depth: 1,
+      limit: 4,
+    })
+  ).docs
+
   return (
     <html lang="en">
       <body>
-        <Header />
+        <Header pages={pages} />
         <main>{children}</main>
         <Footer />
       </body>
