@@ -1,16 +1,17 @@
 import type { CollectionConfig } from 'payload'
 import { isOwner } from '../access/isOwner'
 import { isLogged } from '../access/isLogged'
+import { isOwnerOrSelf } from '../access/isOwnerorSelf'
 
 export const Events: CollectionConfig = {
   slug: 'events',
   access: {
     // Create: Owner & Staff
     create: isLogged,
-    // Read: Owner any; Staff only if they created it
-    read: isLogged,
+    // Read: Owner and Staff only if they created it
+    read: isOwnerOrSelf,
     // Update: same as read
-    update: isLogged,
+    update: isOwnerOrSelf,
     // Delete: Owner only
     delete: isOwner,
   },

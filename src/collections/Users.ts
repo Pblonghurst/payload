@@ -1,12 +1,16 @@
 import type { CollectionConfig } from 'payload'
 import { isOwner } from '../access/isOwner'
+import { isOwnerOrSelf } from '../access/isOwnerorSelf'
 
 export const Users: CollectionConfig = {
   access: {
-    // only Owner can manage users
+    // Create: Owner only
     create: isOwner,
-    read: isOwner,
-    update: isOwner,
+    // Read: Owner and Staff only if they created it
+    read: isOwnerOrSelf,
+    // Update: Owner and Staff only if they created it
+    update: isOwnerOrSelf,
+    // Delete: Owner only
     delete: isOwner,
   },
   // admin: {
