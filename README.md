@@ -11,9 +11,9 @@ cd payload if you have not done so already
 3. `pnpm install && pnpm dev` to install dependencies and start the dev server
 4. open `http://localhost:3000` to open the app in your browser
 
-example .env:
-DATABASE_URI=mongodb://127.0.0.1/payload-site
-PAYLOAD_SECRET=YOUR_SECRET_HERE
+example .env:  <br />
+DATABASE_URI=mongodb://127.0.0.1/payload-site  <br />
+PAYLOAD_SECRET=YOUR_SECRET_HERE  <br />
 PAYLOAD_SEED=true
 
 #### Docker (Optional)
