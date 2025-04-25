@@ -11,6 +11,11 @@ cd payload if you have not done so already
 3. `pnpm install && pnpm dev` to install dependencies and start the dev server
 4. open `http://localhost:3000` to open the app in your browser
 
+example .env:
+DATABASE_URI=mongodb://127.0.0.1/payload-site
+PAYLOAD_SECRET=YOUR_SECRET_HERE
+PAYLOAD_SEED=true
+
 #### Docker (Optional)
 If you prefer to use Docker for local development instead of a local MongoDB instance, the provided docker-compose.yml file can be used.
 To do so, follow these steps:
@@ -35,8 +40,10 @@ pasword(same for all users): 'changeme'
 
 The two staff own a few events each, aswell as th owner being credited for a few. This can be seen in admin panel.
 
+yoururl/admin to access admin panel
+
 #### testing 
-Using the seeded users I have tested access accross the roles to verify access is correct.
+Using the seeded users you can test access accross the roles to verify access is correct.
 Added pages will have their titles returned in the header nav and link to a page called 'events'.
 'events' in the nav will also link to 'events'. 
 The events page loops through the events added and displays them in a grid.
